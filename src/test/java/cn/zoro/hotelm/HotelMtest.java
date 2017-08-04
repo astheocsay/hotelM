@@ -27,7 +27,6 @@ public class HotelMtest {
     public void testSampleService(){
         Sampleformbean sampleformbean = new Sampleformbean();
         sampleformbean.setUserid(123);
-
         ReturnValue<SampleDto> returnValue =  service.getUserInfo(sampleformbean);
         List<SampleDto> list = returnValue.getList();
         for (SampleDto sampleDto : list) {

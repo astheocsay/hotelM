@@ -6,10 +6,12 @@ import cn.zoro.hotelm.dto.SampleDto;
 import cn.zoro.hotelm.entity.SampleEntity;
 import cn.zoro.hotelm.formbean.Sampleformbean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by fanlei on 2017/8/4.
  */
+@Service
 public class SampleService {
     @Autowired
     private SampleDao dao;
