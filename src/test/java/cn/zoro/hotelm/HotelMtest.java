@@ -24,14 +24,20 @@ public class HotelMtest {
     private SampleService service;
 
     @Test
-    public void testSampleService(){
+    public void testSampleService() {
         Sampleformbean sampleformbean = new Sampleformbean();
         sampleformbean.setUserid(123);
-        ReturnValue<SampleDto> returnValue =  service.getUserInfo(sampleformbean);
+        sampleformbean.setName("咖色蛋糕");
+        ReturnValue<SampleDto> returnValue = service.getUserInfo(sampleformbean);
+        SampleDto sampleDto = returnValue.getObject();
+        System.out.println(sampleDto.getUsername());
+        System.out.println(sampleDto.getPhonenumber());
+        returnValue = service.getUserListInfo(sampleformbean);
+
         List<SampleDto> list = returnValue.getList();
-        for (SampleDto sampleDto : list) {
-            System.out.println(sampleDto.getUsername());
-            System.out.println(sampleDto.getPhonenumber());
+        for (SampleDto sampleDto1 : list) {
+            System.out.println("==============>>>>>>>>>>>>>>>"+sampleDto1.getUsername());
+            System.out.println("==============>>>>>>>>>>>>>>>"+sampleDto1.getPhonenumber());
         }
     }
 

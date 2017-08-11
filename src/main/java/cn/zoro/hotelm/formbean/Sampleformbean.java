@@ -8,4 +8,5 @@ import lombok.Data;
 @Data
 public class Sampleformbean {
     private int userid;
+    private String name;
 }
