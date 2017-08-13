@@ -35,4 +35,11 @@ public class SampleService {
         returnValue.setList(list);
         return returnValue;
     }
+    public ReturnValue<SampleDto> getUserList(Sampleformbean sampleformbean){
+        PageHelper.startPage(1, 10);
+        ReturnValue<SampleDto> returnValue = new ReturnValue<SampleDto>();
+        List<SampleDto> list = dao.getUserList(sampleformbean);
+        returnValue.setList(list);
+        return returnValue;
+    }
 }

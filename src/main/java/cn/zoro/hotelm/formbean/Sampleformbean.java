@@ -7,6 +7,6 @@ import lombok.Data;
  */
 @Data
 public class Sampleformbean {
-    private int userid;
+    private Integer userid;
     private String name;
 }

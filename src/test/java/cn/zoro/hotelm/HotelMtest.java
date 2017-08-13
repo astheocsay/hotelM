@@ -40,5 +40,18 @@ public class HotelMtest {
             System.out.println("==============>>>>>>>>>>>>>>>"+sampleDto1.getPhonenumber());
         }
     }
+    @Test
+    public void testSampleService2() {
+        Sampleformbean sampleformbean = new Sampleformbean();
+//        sampleformbean.setUserid(123);
+        sampleformbean.setName("咖色蛋糕");
+        ReturnValue<SampleDto> returnValue = service.getUserList(sampleformbean);
+
+        List<SampleDto> list = returnValue.getList();
+        for (SampleDto sampleDto : list) {
+            System.out.println("==============>>>>>>>>>>>>>>>"+sampleDto.getUsername());
+            System.out.println("==============>>>>>>>>>>>>>>>"+sampleDto.getPhonenumber());
+        }
+    }
 
 }
